@@ -105,6 +105,7 @@ struct position axis_marks[600];
 
 //to stop cc complaining
 void GLFWCALL keypress();
+void GLFWCALL resize();
 
 
 // functions -----------------------------------------------------------
@@ -118,9 +119,12 @@ void init() {
     glfwOpenWindowHint( GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE );
     glfwOpenWindowHint( GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE );
     glfwOpenWindow( 1000, 800, 8, 8, 8, 8, 0, 0, GLFW_WINDOW );
+    glViewport( 0, 0, 1000, 800 );
     glfwSetWindowTitle( "2D & 3D Graphing in OpenGL" );
     //bind keyboard callback
     glfwSetKeyCallback( keypress );
+    //bind window resize callback
+    glfwSetWindowSizeCallback( resize );
 
     //compile vertex shader
     GLuint v_shader = glCreateShader( GL_VERTEX_SHADER );
@@ -475,6 +479,11 @@ void GLFWCALL keypress( int key, int action ) {
             draw_2d = 0;
         }
     }
+}
+
+//glfw resize
+void GLFWCALL resize( int width, int height ) {
+    glViewport( 0, 0, width, height );
 }
 
 
