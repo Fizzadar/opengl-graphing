@@ -1,5 +1,5 @@
 ## Quick Start
-[!screenshot](https://raw.github.com/Fizzadar/opengl-graphing/master/screenshot.png)
+![screenshot](https://raw.github.com/Fizzadar/opengl-graphing/master/screenshot.png)
 
 This was originally created for an assignment in our "Advanced Graphics" module. To start:
 
