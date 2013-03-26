@@ -9,3 +9,18 @@ This was originally created for an assignment in our "Advanced Graphics" module.
 ## Notes+ Build & tested on OSX, untested on Windows/Linux/etc+ Build in c
 + OpenGL 3.2 core profile
 + Manual perspective, shader based rotations+ Uses glfw for input/window management+ All the y values are scaled (x50), since they otherwise oscillate between -1 & 1  - Could have divided the z/x values also+ Compiled (OSX) using: **gcc graph.c -I/usr/local/include -I/opt/X11/include -L/usr/local/lib -I/opt/X11/lib -w -framework OpenGL -framework Cocoa -framework IOKit -lglfw -o graph**## Features+ No noticeable lag up to 590 samples (after which it ran out of memory, 34,8690 polygons)  - CPU usage also appears low at all times+ ‘Camera’ movement by moving & rotating the entire graph/axis  - Rotations/offsets done in-shader+ Both graphs drawn in 3D space, both can be rotated/moved in the same ways, both can be displayed together or separately
+## License
+
+               DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+                       Version 2, December 2004 
+    
+    Copyright (C) 2013 Nick Barrett <nick@oxygem.com>
+    
+    Everyone is permitted to copy and distribute verbatim or modified 
+    copies of this license document, and changing it is allowed as long 
+    as the name is changed. 
+    
+               DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+      TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
+    
+     0. You just DO WHAT THE FUCK YOU WANT TO.
